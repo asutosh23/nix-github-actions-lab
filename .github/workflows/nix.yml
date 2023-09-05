@@ -24,7 +24,7 @@ jobs:
       - uses: DeterminateSystems/magic-nix-cache-action@main
       
       - name: Update flake.lock
-        uses: DeterminateSystems/update-flake-lock@vX
+        uses: DeterminateSystems/update-flake-lock@main
         with:
           token: ${{ secrets.GH_TOKEN_FOR_UPDATES }}
 
