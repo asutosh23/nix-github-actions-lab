@@ -2,14 +2,15 @@
 name: Check and build the TODOs API (no Nix)
 
 on:
-  push:
-    branches:
-      - main
-    tags:
-      - "v*.*.*"
-  pull_request:
-    branches:
-      - main
+  workflow_dispatch
+  # push:
+  #   branches:
+  #     - main
+  #   tags:
+  #     - "v*.*.*"
+  # pull_request:
+  #   branches:
+  #     - main
 
 jobs:
   check_no-nix:
