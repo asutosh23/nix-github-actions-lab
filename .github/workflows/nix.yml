@@ -23,11 +23,10 @@ jobs:
         uses: DeterminateSystems/nix-installer-action@main
       - uses: DeterminateSystems/magic-nix-cache-action@main
       
-      - name: Automatically update flake.lock
-        uses: DeterminateSystems/update-flake-lock@main
+      - name: Update flake.lock
+        uses: DeterminateSystems/update-flake-lock@vX
         with:
-          pr-title: "Update flake.lock"        # PR title
-          pr-labels: automated # PR labels
+          token: ${{ secrets.GH_TOKEN_FOR_UPDATES }}
 
       - name: Check Nixpkgs inputs
         uses: DeterminateSystems/flake-checker-action@main
