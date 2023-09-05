@@ -31,8 +31,8 @@ jobs:
         uses: DeterminateSystems/update-flake-lock@main
         # with:
           # nix-options: --debug --log-format raw
-        with:
-          token: ${{ secrets.GH_TOKEN_FOR_UPDATES }}
+        # with:
+        #   token: ${{ secrets.GH_TOKEN_FOR_UPDATES }}
 
       - name: Check Nixpkgs inputs
         uses: DeterminateSystems/flake-checker-action@main
