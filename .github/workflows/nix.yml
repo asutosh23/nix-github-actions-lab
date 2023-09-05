@@ -22,6 +22,10 @@ jobs:
       - name: Install Nix
         uses: DeterminateSystems/nix-installer-action@main
       - uses: DeterminateSystems/magic-nix-cache-action@main
+
+      - name: Set up Git credentials
+        run: echo "machine github.com login ${{ secrets.GH_TOKEN }}" > ~/.netrc
+      
       
       - name: Update flake.lock
         uses: DeterminateSystems/update-flake-lock@main
